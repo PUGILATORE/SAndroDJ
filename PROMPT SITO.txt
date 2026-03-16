@@ -1,0 +1,105 @@
+1 modifica
+aggiungi un tappeto musicale di un file nome sandro.mp3
+
+2 pulsante cliccabile sempre presente in basso a destra di contatto whatsapp
+
++++++++++++++
+Crea il codice per un sito web moderno, elegante e "sexy" per un DJ italiano di Roma chiamato "Alessandro Giorgio". Il sito deve essere interamente in lingua italiana, con un design che trasmetta energia, professionalità e atmosfera da night club. Deve essere responsive (perfetto su mobile e desktop). Ricordati di inserire una Galleria per Foto e Video sempre nella stessa pagina.
+
+Brand e Stile:
+
+Nome Artista: Alessandro Giorgio
+
+Location: Roma, Italia
+
+Vibe: Elegante, moderno, notturno, dinamico. Immagina un sito con sfondi scuri (nero o blu notte), testi luminosi (effetto neon o dorati), e grandi immagini di sfondo che ritraggano una folla che balla, una consolle o un dj set. Usa caratteri tipografici moderni e sans-serif (es. Montserrat, Poppins).
+
+Contenuti e Struttura: Il sito deve avere una sola pagina (one-pager) con le seguenti sezioni. Incorpora testualmente tutte le frasi che ti fornisco, esattamente come sono scritte.
+
+Hero Section (Header):
+
+Un grande titolo di benvenuto con il nome dell'artista: "ALESSANDRO GIORGIO".
+
+Un sottotitolo che dica: "La colonna sonora dei tuoi momenti speciali 🎶".
+
+In alto a destra, un pulsante o un link di contatto con il numero di telefono: "📞 3896172465".
+
+Sfondo: immagine suggestiva di una consolle o di un dj al lavoro.
+
+Sezione "Frase d'impatto":
+
+Mostra in grande la frase: "Il tuo evento merita il ritmo giusto! 🎧"
+
+Sotto, un piccolo paragrafo: "Trasforma la tua festa in un'esperienza indimenticabile con Alessandro Giorgio. DJ professionista disponibile per:"
+
+Crea tre icone o pillole colorate con il testo:
+
+🥂 Feste Private
+
+🎉 Eventi e Compleanni
+
+🌙 Dj Set esclusivi
+
+Aggiungi: "Selezioni musicali curate su misura per i tuoi gusti, per far ballare i tuoi ospiti dal primo all'ultimo minuto!"
+
+Sezione "Chi sono" / La Filosofia:
+
+Un titolo: "C'è un ingrediente segreto per una festa perfetta: la musica giusta al momento giusto. "
+
+Inserisci questo testo: "Alessandro Giorgio è il DJ professionista che sa trasformare il tuo evento in un'esperienza unica e indimenticabile. Con anni di esperienza alle spalle e una passione innata per il ritmo, Alessandro sa leggere la pista e adattarsi perfettamente all'atmosfera che desideri. Che si tratti di un elegante ricevimento, di un compleanno scatenato o di un evento esclusivo, lui è la scelta giusta per far ballare i tuoi ospiti dal primo all'ultimo minuto."
+
+Sezione "Servizi Offerti" (con card o griglia):
+
+Titolo: "🎧 Servizi Offerti"
+
+Crea tre card orizzontali o verticali:
+
+Card 1 (Feste Private): "🥂 Feste Private - Compleanni, cene tra amici, lauree o ricorrenze: per ogni occasione, Alessandro cura una selezione musicale su misura per i tuoi gusti e quelli dei tuoi invitati."
+
+Card 2 (Eventi e Cerimonie): "🎉 Eventi e Cerimonie - Dai matrimoni alle feste aziendali, la professionalità e il repertorio di Alessandro Giorgio garantiscono un intrattenimento di alto livello, adatto a tutte le età."
+
+Card 3 (Dj Set Esclusivi): "🌙 Dj Set Esclusivi - Per serate nei locali, eventi privati o aperitivi in compagnia, la sua consolle è pronta ad alzare il volume con le migliori hit del momento, senza dimenticare i grandi classici."
+
+Sezione "Perché Sceglierlo" (Punti di forza):
+
+Titolo: "🔥 Perché Sceglierlo? "
+
+Elenca questi punti con delle spunte (icone ✅ o ✔️):
+
+"Selezione musicale curata: Dal genere House alle hit commerciali, passando per gli anni '90/2000 e la musica Latino. La playlist è sempre adattabile ai tuoi gusti!"
+
+"Professionalità e affidabilità: Massima serietà, puntualità e attrezzatura sound di qualità per garantire un audio perfetto."
+
+"Esperienza sul campo: Alessandro sa come coinvolgere il pubblico e creare l'atmosfera giusta per ogni momento della serata."
+
+Sezione "Contatti" (Call to Action - Fondamentale):
+
+Sfondo leggermente diverso per mettere in risalto la sezione.
+
+Un titolo grande: "📲 Contattalo Subito! "
+
+Sottotitolo: "Non lasciare la musica al caso. Affidati a chi sa il fatto suo e prenota la data del tuo evento!"
+
+Metti in grande evidenza il numero di telefono con un pulsante gigante o un box ben visibile:
+
+"📞 Cellulare / WhatsApp: 3896172465"
+
+(Il numero deve essere cliccabile per chiamare direttamente da mobile).
+
+Aggiungi un piccolo testo sotto: "📍 Chiama ora per un preventivo senza impegno e inizia a dare il ritmo alla tua festa!"
+
+Footer:
+
+Ripeti il nome: "🎶 Alessandro Giorgio - La colonna sonora dei tuoi momenti speciali. "
+
+Aggiungere un copyright type: "© 2026 Alessandro Giorgio DJ - Roma"
+
+Funzionalità Richieste:
+
+Il numero di telefono (3896172465) deve essere un link tel: e anche un link https://wa.me/ al clic, oppure specificare che è anche WhatsApp.
+
+Tutto il testo deve essere in ITALIANO.
+
+Usa una palette di colori scura (es. #0a0a0a o #111111) con accenti dorati (#D4AF37) o color neon (#1ED760 o #6A0DAD).
+
+Assicurati che il design dia un senso di lusso e modernità, adatto a un DJ che lavora a Roma.

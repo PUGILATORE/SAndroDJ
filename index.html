@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alessandro Giorgio · DJ Roma</title>
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', 'Poppins', sans-serif;
+      background-color: #0a0a0a;
+      color: #f0f0f0;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    /* palette notturna con accenti oro e neon */
+    :root {
+      --bg-dark: #0a0a0a;
+      --bg-deep: #111111;
+      --gold: #D4AF37;
+      --gold-light: #f5d742;
+      --neon-glow: rgba(212, 175, 55, 0.3);
+      --card-bg: rgba(20, 20, 20, 0.8);
+      --glass-border: rgba(255, 215, 0, 0.15);
+    }
+
+    h1, h2, h3 {
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: var(--gold);
+      text-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
+      display: inline-block;
+      border-bottom: 2px solid var(--gold);
+      padding-bottom: 0.5rem;
+    }
+
+    .section {
+      padding: 5rem 1.5rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    /* --- HERO --- */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1571266028243-e4733b0f0bb3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat fixed;
+      background-attachment: fixed;
+      position: relative;
+    }
+
+    .hero-top {
+      display: flex;
+      justify-content: flex-end;
+      padding: 2rem 3rem;
+    }
+
+    .contact-top {
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--glass-border);
+      border-radius: 50px;
+      padding: 0.8rem 1.8rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--gold);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: 0.3s;
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+    }
+
+    .contact-top i {
+      font-size: 1.5rem;
+    }
+
+    .contact-top:hover {
+      background: var(--gold);
+      color: #0a0a0a;
+      transform: scale(1.05);
+      box-shadow: 0 0 30px var(--gold);
+    }
+
+    .hero-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(3rem, 15vw, 7rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-shadow: 0 0 20px #D4AF37, 0 0 40px #b38620;
+      letter-spacing: 6px;
+      margin-bottom: 1rem;
+      line-height: 1.1;
+    }
+
+    .hero-content p {
+      font-size: clamp(1.2rem, 4vw, 2.2rem);
+      font-weight: 300;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(4px);
+      padding: 0.8rem 2rem;
+      border-radius: 60px;
+      border: 1px solid var(--gold);
+      display: inline-block;
+      color: #fff;
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    }
+
+    /* --- sezioni comuni --- */
+    .impact-section, .about-section, .services-section, .why-section, .gallery-section, .contact-section {
+      background-color: var(--bg-dark);
+    }
+
+    .impact-section {
+      background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+    }
+
+    .pill-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 2.5rem 0;
+    }
+
+    .pill {
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid var(--gold);
+      color: var(--gold-light);
+      padding: 1rem 2.5rem;
+      border-radius: 60px;
+      font-size: 1.3rem;
+      font-weight: 600;
+      backdrop-filter: blur(4px);
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .pill:hover {
+      background: var(--gold);
+      color: #0a0a0a;
+      transform: translateY(-5px);
+    }
+
+    .big-quote {
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      color: #fff;
+      text-shadow: 0 0 10px var(--gold);
+    }
+
+    .big-quote span {
+      color: var(--gold);
+    }
+
+    /* card servizi */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .service-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(5px);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      padding: 2rem 1.5rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px -10px rgba(0,0,0,0.8);
+      text-align: center;
+    }
+
+    .service-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
+    }
+
+    .service-card i {
+      font-size: 3rem;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+
+    .service-card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--gold);
+    }
+
+    .service-card p {
+      color: #ddd;
+      font-size: 1rem;
+    }
+
+    /* punti di forza */
+    .check-list {
+      list-style: none;
+      max-width: 800px;
+      margin: 2rem auto;
+    }
+
+    .check-list li {
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      background: rgba(255,255,255,0.03);
+      padding: 1rem 2rem;
+      border-radius: 18px;
+      border-left: 5px solid var(--gold);
+    }
+
+    .check-list i {
+      color: var(--gold);
+      font-size: 1.8rem;
+      min-width: 2rem;
+    }
+
+    /* GALLERIA con lightbox */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+      border: 2px solid transparent;
+      transition: 0.3s;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.8);
+    }
+
+    .gallery-item:hover {
+      border-color: var(--gold);
+      transform: scale(1.02);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .media-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(5px);
+      color: var(--gold);
+      padding: 0.4rem 1rem;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: 1px solid var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      z-index: 2;
+    }
+
+    .play-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: 0.2s;
+      z-index: 3;
+    }
+
+    .gallery-item:hover .play-overlay {
+      opacity: 1;
+    }
+
+    .play-overlay i {
+      font-size: 4rem;
+      color: var(--gold);
+      filter: drop-shadow(0 0 15px gold);
+    }
+
+    .video-thumb {
+      cursor: pointer;
+    }
+
+    /* MODALE VIDEO (lightbox) */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.95);
+      backdrop-filter: blur(8px);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+      border: 2px solid var(--gold);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 50px rgba(212, 175, 55, 0.5);
+    }
+
+    .close-modal {
+      position: absolute;
+      top: -50px;
+      right: 0;
+      color: #fff;
+      font-size: 3rem;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 1001;
+      transition: 0.2s;
+      line-height: 1;
+    }
+
+    .close-modal:hover {
+      color: var(--gold);
+      transform: scale(1.2);
+    }
+
+    #modalVideo {
+      width: 100%;
+      max-height: 80vh;
+      display: block;
+    }
+
+    /* CONTATTI */
+    .contact-box {
+      background: linear-gradient(145deg, #151515, #1e1e1e);
+      border: 2px solid var(--gold);
+      border-radius: 60px;
+      padding: 3rem;
+      margin: 2rem auto;
+      max-width: 900px;
+      text-align: center;
+      box-shadow: 0 0 50px rgba(212, 175, 55, 0.3);
+    }
+
+    .contact-box .big-number {
+      font-size: clamp(2.2rem, 8vw, 4.5rem);
+      font-weight: 800;
+      color: var(--gold);
+      letter-spacing: 3px;
+      margin: 1rem 0;
+      text-shadow: 0 0 15px currentColor;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem 0 1rem;
+    }
+
+    .btn-gold {
+      background: transparent;
+      border: 2px solid var(--gold);
+      color: var(--gold);
+      padding: 1.2rem 2.5rem;
+      border-radius: 60px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      transition: 0.2s;
+      min-width: 240px;
+      justify-content: center;
+    }
+
+    .btn-gold i {
+      font-size: 2rem;
+    }
+
+    .btn-gold:hover {
+      background: var(--gold);
+      color: #0a0a0a;
+      transform: scale(1.05);
+      box-shadow: 0 0 30px gold;
+    }
+
+    .contact-note {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-top: 2rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #050505;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      border-top: 1px solid var(--gold);
+      font-size: 1.1rem;
+    }
+
+    footer p {
+      margin: 0.5rem 0;
+      color: #aaa;
+    }
+
+    footer .brand-footer {
+      color: var(--gold);
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    /* FLOATING BUTTON WHATSAPP */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #25D366;
+      color: white;
+      border-radius: 60px;
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5), 0 0 20px rgba(37,211,102,0.6);
+      z-index: 999;
+      border: 2px solid var(--gold);
+      transition: 0.3s;
+      backdrop-filter: blur(4px);
+    }
+
+    .whatsapp-float i {
+      font-size: 2.2rem;
+    }
+
+    .whatsapp-float:hover {
+      background: #20b859;
+      transform: scale(1.08) translateY(-5px);
+      box-shadow: 0 20px 30px rgba(0,0,0,0.7), 0 0 30px #D4AF37;
+    }
+
+    /* TAPPETO MUSICALE */
+    .music-player {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      background: rgba(10,10,10,0.8);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--gold);
+      border-radius: 60px;
+      padding: 0.8rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 999;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.6), 0 0 15px var(--neon-glow);
+      color: var(--gold);
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .music-player i {
+      font-size: 2rem;
+      color: var(--gold);
+    }
+
+    .music-player:hover {
+      border-color: var(--gold-light);
+      background: rgba(20,20,20,0.9);
+      box-shadow: 0 0 25px var(--gold);
+    }
+
+    .music-player .track-name {
+      max-width: 120px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 2rem;
+      }
+      .hero-top {
+        justify-content: center;
+        padding: 1.5rem 1rem;
+      }
+      .contact-top {
+        font-size: 1.1rem;
+        padding: 0.6rem 1.2rem;
+      }
+      .big-quote {
+        font-size: 2rem;
+      }
+      .pill {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+      }
+      .check-list li {
+        font-size: 1rem;
+        padding: 0.8rem 1rem;
+      }
+      .contact-box {
+        padding: 2rem 1rem;
+      }
+      .btn-gold {
+        font-size: 1.2rem;
+        padding: 1rem 1.5rem;
+        min-width: 180px;
+      }
+      .whatsapp-float {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.2rem;
+        bottom: 20px;
+        right: 20px;
+      }
+      .music-player {
+        bottom: 20px;
+        left: 20px;
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .section {
+        padding: 3rem 1rem;
+      }
+      .music-player .track-name {
+        max-width: 80px;
+      }
+    }
+
+    .gold-text {
+      color: var(--gold);
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO SECTION -->
+<section id="hero">
+  <div class="hero-top">
+    <a href="tel:+393896172465" class="contact-top">
+      <i class="fas fa-phone-alt"></i> 📞 3896172465
+    </a>
+  </div>
+  <div class="hero-content">
+    <h1>ALESSANDRO GIORGIO</h1>
+    <p>La colonna sonora dei tuoi momenti speciali 🎶</p>
+  </div>
+</section>
+
+<!-- FRASE D'IMPATTO -->
+<section class="section impact-section">
+  <div class="big-quote">
+    Il tuo evento merita il ritmo giusto! <span>🎧</span>
+  </div>
+  <p style="font-size: 1.4rem; max-width: 800px; margin: 1rem auto 2rem; color: #ccc;">
+    Trasforma la tua festa in un'esperienza indimenticabile con Alessandro Giorgio. DJ professionista disponibile per:
+  </p>
+
+  <div class="pill-container">
+    <span class="pill"><i class="fas fa-champagne-glasses"></i> 🥂 Feste Private</span>
+    <span class="pill"><i class="fas fa-balloon"></i> 🎉 Eventi e Compleanni</span>
+    <span class="pill"><i class="fas fa-moon"></i> 🌙 Dj Set esclusivi</span>
+  </div>
+
+  <p style="font-size: 1.3rem; font-style: italic; max-width: 800px; margin: 2rem auto 0; color: #ddd; border-left: 3px solid var(--gold); padding-left: 1.5rem;">
+    “Selezioni musicali curate su misura per i tuoi gusti, per far ballare i tuoi ospiti dal primo all'ultimo minuto!”
+  </p>
+</section>
+
+<!-- CHI SONO / FILOSOFIA -->
+<section class="section about-section">
+  <h2>🎼 La filosofia</h2>
+  <div style="max-width: 1000px; margin: 0 auto;">
+    <p style="font-size: 2rem; font-weight: 600; color: #fff; margin-bottom: 1.5rem; line-height: 1.3;">
+      "C'è un ingrediente segreto per una festa perfetta: la musica giusta al momento giusto."
+    </p>
+    <p style="font-size: 1.2rem; color: #bbb; background: rgba(212,175,55,0.02); padding: 2rem; border-radius: 30px; border: 1px solid #333;">
+      Alessandro Giorgio è il DJ professionista che sa trasformare il tuo evento in un'esperienza unica e indimenticabile. Con anni di esperienza alle spalle e una passione innata per il ritmo, Alessandro sa leggere la pista e adattarsi perfettamente all'atmosfera che desideri. Che si tratti di un elegante ricevimento, di un compleanno scatenato o di un evento esclusivo, lui è la scelta giusta per far ballare i tuoi ospiti dal primo all'ultimo minuto.
+    </p>
+  </div>
+</section>
+
+<!-- SERVIZI OFFERTI (CARD) -->
+<section class="section services-section">
+  <h2>🎧 Servizi Offerti</h2>
+  <div class="cards-grid">
+    <!-- Card 1 -->
+    <div class="service-card">
+      <i class="fas fa-glass-cheers"></i>
+      <h3>🥂 Feste Private</h3>
+      <p>Compleanni, cene tra amici, lauree o ricorrenze: per ogni occasione, Alessandro cura una selezione musicale su misura per i tuoi gusti e quelli dei tuoi invitati.</p>
+    </div>
+    <!-- Card 2 -->
+    <div class="service-card">
+      <i class="fas fa-ring"></i>
+      <h3>🎉 Eventi e Cerimonie</h3>
+      <p>Dai matrimoni alle feste aziendali, la professionalità e il repertorio di Alessandro Giorgio garantiscono un intrattenimento di alto livello, adatto a tutte le età.</p>
+    </div>
+    <!-- Card 3 -->
+    <div class="service-card">
+      <i class="fas fa-headphones"></i>
+      <h3>🌙 Dj Set Esclusivi</h3>
+      <p>Per serate nei locali, eventi privati o aperitivi in compagnia, la sua consolle è pronta ad alzare il volume con le migliori hit del momento, senza dimenticare i grandi classici.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PERCHÉ SCEGLIERLO -->
+<section class="section why-section">
+  <h2>🔥 Perché Sceglierlo?</h2>
+  <ul class="check-list">
+    <li><i class="fas fa-check-circle"></i> <strong>Selezione musicale curata:</strong> Dal genere House alle hit commerciali, passando per gli anni '90/2000 e la musica Latino. La playlist è sempre adattabile ai tuoi gusti!</li>
+    <li><i class="fas fa-check-circle"></i> <strong>Professionalità e affidabilità:</strong> Massima serietà, puntualità e attrezzatura sound di qualità per garantire un audio perfetto.</li>
+    <li><i class="fas fa-check-circle"></i> <strong>Esperienza sul campo:</strong> Alessandro sa come coinvolgere il pubblico e creare l'atmosfera giusta per ogni momento della serata.</li>
+  </ul>
+</section>
+
+<!-- GALLERIA FOTO E VIDEO con lightbox per i video -->
+<section class="section gallery-section">
+  <h2>📸 Galleria Foto & Video</h2>
+  <div class="gallery-grid">
+    <!-- foto 1 -->
+    <div class="gallery-item">
+      <img src="dj set anni 8090.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Crowd dancing">
+      <span class="media-badge"><i class="fas fa-camera"></i> Foto</span>
+    </div>
+    <!-- foto 2 -->
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1493676304819-0d7a8d026dcf?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="DJ at work">
+      <span class="media-badge"><i class="fas fa-camera"></i> Foto</span>
+    </div>
+    <!-- foto 3 -->
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Club lights">
+      <span class="media-badge"><i class="fas fa-camera"></i> Foto</span>
+    </div>
+    <!-- video 1 - Joker.mp4 -->
+    <div class="gallery-item video-thumb" data-video-src="Joker.mp4">
+      <img src="JokerThumb.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="DJ console">
+      <span class="media-badge"><i class="fas fa-video"></i> Video</span>
+      <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+    </div>
+    <!-- video 2 - Ballo.mp4 -->
+    <div class="gallery-item video-thumb" data-video-src="Ballo.mp4">
+      <img src="BalloThumb.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Party scene">
+      <span class="media-badge"><i class="fas fa-video"></i> Video</span>
+      <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+    </div>
+    <!-- foto 4 (bonus) -->
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Dj mixer">
+      <span class="media-badge"><i class="fas fa-camera"></i> Foto</span>
+    </div>
+  </div>
+  <p style="text-align: center; margin-top: 2rem; color: #aaa;"><i class="fas fa-music gold-text"></i> Scorri e rivivi le emozioni delle serate <i class="fas fa-music gold-text"></i></p>
+</section>
+
+<!-- CONTATTI (call to action) -->
+<section class="section contact-section" style="background: #0d0d0d;">
+  <h2>📲 Contattalo Subito!</h2>
+  <p style="font-size: 1.5rem; margin-bottom: 1rem; color: #ddd;">Non lasciare la musica al caso. Affidati a chi sa il fatto suo e prenota la data del tuo evento!</p>
+
+  <div class="contact-box">
+    <div style="font-size: 1.8rem; color: var(--gold);">📞 Cellulare / WhatsApp</div>
+    <div class="big-number">389 617 2465</div>
+
+    <div class="contact-actions">
+      <a href="tel:+393896172465" class="btn-gold"><i class="fas fa-phone-alt"></i> Chiama ora</a>
+      <a href="https://wa.me/393896172465" target="_blank" class="btn-gold"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
+
+    <p class="contact-note">
+      <i class="fas fa-map-marker-alt gold-text"></i> 📍 Chiama ora per un preventivo senza impegno e inizia a dare il ritmo alla tua festa!
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p class="brand-footer">🎶 Alessandro Giorgio - La colonna sonora dei tuoi momenti speciali.</p>
+  <p>© 2026 Alessandro Giorgio DJ - Roma</p>
+  <p style="margin-top: 1rem; font-size: 0.9rem;">📍 Roma, Italia · <i class="fas fa-heart" style="color: #D4AF37;"></i> musica su misura</p>
+</footer>
+
+<!-- PULSANTE WHATSAPP FLOTTANTE -->
+<a href="https://wa.me/393896172465" target="_blank" class="whatsapp-float" aria-label="Chatta su WhatsApp">
+  <i class="fab fa-whatsapp"></i> <span>Scrivimi su WhatsApp</span>
+</a>
+
+<!-- TAPPETO MUSICALE (sandro.mp3) -->
+<div class="music-player" id="musicPlayer">
+  <i class="fas fa-play" id="playPauseIcon"></i>
+  <span class="track-name">sandro.mp3</span>
+  <i class="fas fa-volume-up" style="opacity:0.8;"></i>
+</div>
+
+<audio id="bgMusic" loop>
+  <source src="sandro.mp3" type="audio/mpeg">
+  Il tuo browser non supporta l'audio HTML5.
+</audio>
+
+<!-- MODALE VIDEO (lightbox) -->
+<div id="videoModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <video id="modalVideo" controls></video>
+  </div>
+</div>
+
+<script>
+  // Gestione tappeto musicale
+  const audio = document.getElementById('bgMusic');
+  const player = document.getElementById('musicPlayer');
+  const icon = document.getElementById('playPauseIcon');
+
+  audio.volume = 0.4;
+
+  player.addEventListener('click', function() {
+    if (audio.paused) {
+      audio.play().catch(e => console.log('Autoplay bloccato, clicca di nuovo'));
+      icon.classList.remove('fa-play');
+      icon.classList.add('fa-pause');
+    } else {
+      audio.pause();
+      icon.classList.remove('fa-pause');
+      icon.classList.add('fa-play');
+    }
+  });
+
+  audio.addEventListener('ended', function() {
+    icon.classList.remove('fa-pause');
+    icon.classList.add('fa-play');
+  });
+
+  // Lightbox per video
+  const modal = document.getElementById('videoModal');
+  const modalVideo = document.getElementById('modalVideo');
+  const closeBtn = document.querySelector('.close-modal');
+
+  document.querySelectorAll('.video-thumb').forEach(thumb => {
+    thumb.addEventListener('click', function() {
+      const videoSrc = this.dataset.videoSrc;
+      if (videoSrc) {
+        modalVideo.src = videoSrc;
+        modal.style.display = 'flex';
+        modalVideo.play(); // parte automaticamente
+      }
+    });
+  });
+
+  closeBtn.addEventListener('click', function() {
+    modal.style.display = 'none';
+    modalVideo.pause();
+    modalVideo.src = ''; // ferma il caricamento
+  });
+
+  window.addEventListener('click', function(e) {
+    if (e.target == modal) {
+      modal.style.display = 'none';
+      modalVideo.pause();
+      modalVideo.src = '';
+    }
+  });
+</script>
+
+</body>
+</html>
